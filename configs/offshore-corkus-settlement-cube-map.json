@@ -1,0 +1,13 @@
+{
+    "type": "cubemap",
+    "cubeMap": [
+        "../imgs/panoramas/offshore-corkus-settlement/panorama_0.png",
+        "../imgs/panoramas/offshore-corkus-settlement/panorama_1.png",
+        "../imgs/panoramas/offshore-corkus-settlement/panorama_2.png",
+        "../imgs/panoramas/offshore-corkus-settlement/panorama_3.png",
+        "../imgs/panoramas/offshore-corkus-settlement/panorama_4.png",
+        "../imgs/panoramas/offshore-corkus-settlement/panorama_5.png"
+    ],
+    "autoLoad": true,
+    "showControls": false
+}

@@ -1,0 +1,13 @@
+{
+    "type": "cubemap",
+    "cubeMap": [
+        "../imgs/panoramas/air-temple-lower/panorama_0.png",
+        "../imgs/panoramas/air-temple-lower/panorama_1.png",
+        "../imgs/panoramas/air-temple-lower/panorama_2.png",
+        "../imgs/panoramas/air-temple-lower/panorama_3.png",
+        "../imgs/panoramas/air-temple-lower/panorama_4.png",
+        "../imgs/panoramas/air-temple-lower/panorama_5.png"
+    ],
+    "autoLoad": true,
+    "showControls": false
+}

@@ -1,0 +1,44 @@
+html {
+    text-align: center;
+    background-image: url('signup/signup.png');
+    background-repeat:repeat;
+    background-size: cover;
+}
+div {
+    padding : 20px;
+}
+div:hover:not(#header) {
+    color: red;
+}
+a {
+    text-decoration: none;
+	color:white;
+	font-weight:bold;
+	font-size:2em;
+}
+a:hover{
+	color:yellow
+}
+h1 {
+	font-size:4em;
+	color:white;
+}
+#ranked, #solo,#casual{
+    all:unset;
+    top: 400px;
+    background-color: #122932;
+border: 4px solid black;
+    border-radius: 20px;
+    margin-left: 0px;
+    width: 345px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	font-weight:bold;
+    font-size: 20px;
+    color: white;
+}
+#ranked,#solo,#casual:hover{
+opacity:0.7
+}

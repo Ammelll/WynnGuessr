@@ -1,0 +1,13 @@
+{
+    "type": "cubemap",
+    "cubeMap": [
+        "../imgs/panoramas/lions-den/panorama_0.png",
+        "../imgs/panoramas/lions-den/panorama_1.png",
+        "../imgs/panoramas/lions-den/panorama_2.png",
+        "../imgs/panoramas/lions-den/panorama_3.png",
+        "../imgs/panoramas/lions-den/panorama_4.png",
+        "../imgs/panoramas/lions-den/panorama_5.png"
+    ],
+    "autoLoad": true,
+    "showControls": false
+}

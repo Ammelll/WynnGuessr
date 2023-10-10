@@ -1,0 +1,13 @@
+{
+    "type": "cubemap",
+    "cubeMap": [
+        "../imgs/panoramas/north-lusuco/panorama_0.png",
+        "../imgs/panoramas/north-lusuco/panorama_1.png",
+        "../imgs/panoramas/north-lusuco/panorama_2.png",
+        "../imgs/panoramas/north-lusuco/panorama_3.png",
+        "../imgs/panoramas/north-lusuco/panorama_4.png",
+        "../imgs/panoramas/north-lusuco/panorama_5.png"
+    ],
+    "autoLoad": true,
+    "showControls": false
+}

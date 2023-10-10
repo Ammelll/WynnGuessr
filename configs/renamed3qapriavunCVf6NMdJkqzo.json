@@ -1,0 +1,13 @@
+{
+    "type": "cubemap",
+    "cubeMap": [
+        "../imgs/panoramas/renamed3qapriavunCVf6NMdJkqzo/panorama_0.png",
+        "../imgs/panoramas/renamed3qapriavunCVf6NMdJkqzo/panorama_1.png",
+        "../imgs/panoramas/renamed3qapriavunCVf6NMdJkqzo/panorama_2.png",
+        "../imgs/panoramas/renamed3qapriavunCVf6NMdJkqzo/panorama_3.png",
+        "../imgs/panoramas/renamed3qapriavunCVf6NMdJkqzo/panorama_4.png",
+        "../imgs/panoramas/renamed3qapriavunCVf6NMdJkqzo/panorama_5.png"
+    ],
+    "autoLoad": true,
+    "showControls": false
+}

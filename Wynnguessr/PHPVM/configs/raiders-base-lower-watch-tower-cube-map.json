@@ -1,0 +1,13 @@
+{
+    "type": "cubemap",
+    "cubeMap": [
+        "../imgs/panoramas/raiders-base-lower-watch-tower/panorama_0.png",
+        "../imgs/panoramas/raiders-base-lower-watch-tower/panorama_1.png",
+        "../imgs/panoramas/raiders-base-lower-watch-tower/panorama_2.png",
+        "../imgs/panoramas/raiders-base-lower-watch-tower/panorama_3.png",
+        "../imgs/panoramas/raiders-base-lower-watch-tower/panorama_4.png",
+        "../imgs/panoramas/raiders-base-lower-watch-tower/panorama_5.png"
+    ],
+    "autoLoad": true,
+    "showControls": false
+}

@@ -1,0 +1,13 @@
+{
+    "type": "cubemap",
+    "cubeMap": [
+        "../imgs/panoramas/mysterious-manor/panorama_0.png",
+        "../imgs/panoramas/mysterious-manor/panorama_1.png",
+        "../imgs/panoramas/mysterious-manor/panorama_2.png",
+        "../imgs/panoramas/mysterious-manor/panorama_3.png",
+        "../imgs/panoramas/mysterious-manor/panorama_4.png",
+        "../imgs/panoramas/mysterious-manor/panorama_5.png"
+    ],
+    "autoLoad": true,
+    "showControls": false
+}

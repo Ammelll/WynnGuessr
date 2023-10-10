@@ -1,0 +1,10 @@
+html {
+    background-image: url('signup/signup.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a {
+    text-decoration :none;
+    border-style: solid;
+    color: lightgreen;
+}

@@ -1,0 +1,13 @@
+{
+    "type": "cubemap",
+    "cubeMap": [
+        "../imgs/panoramas/sky-islands-ice-castle/panorama_0.png",
+        "../imgs/panoramas/sky-islands-ice-castle/panorama_1.png",
+        "../imgs/panoramas/sky-islands-ice-castle/panorama_2.png",
+        "../imgs/panoramas/sky-islands-ice-castle/panorama_3.png",
+        "../imgs/panoramas/sky-islands-ice-castle/panorama_4.png",
+        "../imgs/panoramas/sky-islands-ice-castle/panorama_5.png"
+    ],
+    "autoLoad": true,
+    "showControls": false
+}

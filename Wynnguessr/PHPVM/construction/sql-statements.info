@@ -1,0 +1,37 @@
+CREATE TABLE `users`(
+    `id` INT(11) NOT NULL AUTO_INCREMENT,
+    `username` varchar(20),
+	`email` varchar(256),
+    `pwd` varchar(256),
+    `elo` int(11) DEFAULT 1000,
+    `creation-time` DATETIME DEFAULT CURRENT_TIMESTAMP,
+	`is-admin` boolean DEFAULT false,
+    PRIMARY KEY (id)
+);
+CREATE TABLE `matches`(
+    `matchID` INT(11) NOT NULL AUTO_INCREMENT,
+    `player_one_id` int(11),
+    `player_two_id` int(11),
+    `player_one_elo_change` int(11),
+    `player_two_elo_change` int(11),
+    `winnerID` int(11),
+    `creation-time` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (matchID)
+);
+CREATE TABLE `rounds`(
+    `roundID` INT(11) NOT NULL AUTO_INCREMENT,
+    `matchID` int(11),
+    `round_stage` int(11),
+    `panoramaID` int(11),
+    `score` int(11),
+    `lat` int(11),
+    `lng` int(11),
+    PRIMARY KEY (roundID)
+);
+CREATE TABLE `panoramas`(
+    `panoramaID` INT(11) NOT NULL AUTO_INCREMENT,
+    `cubemap-filename` varchar(30),
+    `lat` int(11),
+    `lng` int(11),
+    PRIMARY KEY (panoramaID)
+);

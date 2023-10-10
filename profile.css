@@ -1,0 +1,98 @@
+body{
+    margin: 0 0 0 0;
+    background-image: url("game.png");
+    background-size: cover;
+}
+h1 {
+    font-family: 'MinecraftiaRegular';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 48px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+ } 
+p{
+    margin-left: 10px;
+    font-family: 'MinecraftiaRegular';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    color: white;
+}
+a{
+    color: white;
+}
+table {
+    font-size: 32px;
+    width: 50%;
+    height: 150px;
+    border: 1px solid;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+    margin-left: 10px;
+
+  }
+td{
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 50px;
+
+}
+.date{
+    background-color: rgb(204, 202, 212);
+}
+tr{
+    background-color: rgb(204, 202, 212);
+}
+
+
+tr.winner{
+    background-color: #8CC084;
+}
+tr.loser{
+    background-color: #F28482;
+}
+.friends-container{
+    font-family: 'MinecraftiaRegular';
+    font-size: 32px;
+    display: flex;
+    margin-left: 10px;
+}
+.friends-container figcaption
+{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.526);
+    border-radius: 15px;
+    padding: 3px 3px 3px 3px;
+}
+.friends-container ul{
+    margin-top: 40px;
+}
+.friends-container li{
+    margin-right: 20px;
+}
+#friend-button{
+    background-color: #FFFFFF;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    color: #222222;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 13px 23px;
+    margin-left: 10px;
+}
+.admin-friend{
+    background-color: #FFFFFF;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    color: #222222;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 13px 23px;
+    margin-left: 10px;
+}

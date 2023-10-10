@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Document</title>
+</head>
+<body>
+    <h1>Design Document: Ranked Guessr Duels</h1>
+    <p>Ranked Guessr duels incorperates your favorite parts of Geoguessr into a fantastical video game environment. Our data uses 5 tables with one JUNCTION table.</p>
+    <h2>ERA</h2>
+    <img src="lucid.png" alt="">
+    <h2>Webpages List</h2>
+    <ul>
+        <li>connecth.inc.php - Handles player two connecting to a match logic</li>
+        <li>dbh.inc.php - Handles database connection</li>
+        <li>functions.inc.php - Handles functions, primarily relating to verification of login details</li>
+        <li>loginh.inc.php - Handles login logic</li>
+        <li>signuph.inc.php - Handles signup logic</li>
+        <li>login.php - Login Page</li>
+        <li>signup.php - Signup Page</li>
+        <li>accept.php - Handles accepted friend requests</li>
+        <li>reject.php - Handles rejected friend requests</li>
+        <li>admin.php - Handles requests only made by admins (CUD)</li>
+        <li>friend.php - Handles friend sending logic</li>
+        <li>game.php - Main Game, displays connection page, sends match and game data to db</li>
+        <li>home.php - Displays links to main parts of website</li>
+        <li>leaderboard.php - Lists up to top 10 highest ranked in elo players</li>
+        <li>match-end.php - Sends match data after match terminates</li>
+        <li>profile.php - Displays user profiles which contains info on their elo, account-creation date, previous matches, and friends. Defaults to logged in user, with ?id= can refer to other users</li>
+        <li>replay.php - When accompanied with a ?id= refers to a specific replay of a match</li>
+        <li>round-end.php - Sends round data after round terminates</li>
+        <li>signout.php - Destroys session data and logs the user out</li>
+        <li>references.html - Shows references used for project</li>
+    </ul>
+    <img src="flowchart.png" alt="">
+    <br>
+    <a href="https://lucid.app/lucidchart/693bef57-97ae-4c53-a677-e08027f9842e/edit?beaconFlowId=ECC85C76D77A174D&invitationId=inv_c8c2c8cb-3c41-4af0-87c7-a04c254d967b&page=0_0#">If bad resolution original</a>
+</body>
+</html>

@@ -1,0 +1,255 @@
+body{
+    margin: 0px 0px 0px 0px;
+    padding: 0 0 0 0;
+}
+
+.panorama-container iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.panorama-data{
+    width: 0;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+}
+.player-data{
+    width: 0px;
+    height: 0px;
+    visibility: hidden; 
+}
+.game-data{
+    width: 0px;
+    height: 0px;
+    visibility: hidden; 
+}
+.map-container{
+display: flex;
+justify-content: right;
+align-items: flex-end;
+height: 100vh;
+}
+#map{
+    width: 30%;
+    height: 50%;
+position: relative !important;
+display: flex;
+align-items: end;
+    border: 5px solid black;
+    border-radius: 20px 20px 0px 20px;
+    opacity: 30%;
+    transition: 0.2s ease-in-out;
+}
+#map:hover{
+    animation: fadeIn 0.5s;
+    animation: grow 0.5s;
+    opacity: 100%;
+
+    width: 40%;
+    height: 65%;
+    transition: ease-out;
+}
+.leaflet-container {
+    background-color:rgb(34, 34, 34) !important;
+}
+@keyframes grow {
+    0% {width: 30%;
+
+        height:50%;
+    
+    }
+    100%{
+        width: 40%;
+        height:65%;
+    }
+}
+
+#submit{
+    position:absolute;
+    width:100%;
+font-size: 30px;
+    background: #5E5DF0;
+    border-radius: 999px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 8px 18px;
+    touch-action: manipulation;
+    height: 9%;
+    border: 0;
+    z-index: 1000;
+}
+button:disabled{
+    opacity: 0.2;
+}
+button:enabled{
+    opacity: 1;
+}
+#transition-screen{
+    z-index: 2;
+    animation: fadeIn 0.5s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(53, 52, 56, 0.829);
+}
+.continue-container{
+    display: flex;
+    justify-content: center;
+}
+#continue{
+    top: 95%;
+    position: absolute;
+    font-size: 30px;
+    background: #5E5DF0;
+    border-radius: 999px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 8px 18px;
+    touch-action: manipulation;
+    width: 200px;
+    height: 40px;
+    border: 0;
+    z-index: 10;
+}
+.hidden{
+    visibility: hidden;
+}
+
+.connect-container{
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+.connect-box{
+    visibility: visible;
+    position: relative;
+    width: 375px;
+    height: 500px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.212);
+    border: 3px solid gray;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+
+}
+#connect-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.connect-text{
+    top: 10%;
+    position: absolute;
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+}
+.connect-text-light{
+    position: absolute;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+input{
+    top: 20%;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1.2rem;
+    padding: 1.5rem 2rem;
+    margin-top: 30px;
+    margin-left: 24px;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 70%;
+    height: 20px;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+    height: 0px;
+}
+#connect-button{
+    all:unset;
+    top: 350px;
+    position: absolute;
+    background-color: #3ab652;
+    border-radius: 5px;
+    margin-left: 0px;
+    width: 345px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+}
+#connect-button:hover{
+    opacity: 0.8;
+}
+#userContainer{
+position: absolute;
+background: rgb(34, 34, 34) !important;
+color: white;
+border-radius: 0px 0px 25px 0px;
+font-family: 'Heebo', sans-serif;
+font-size: 32px;
+font-weight: bold;
+padding:5px;
+}
+#oppContainer{
+position: absolute;
+display: flex;
+justify-content: end;
+width: 100%;
+}
+#oppContainer span{
+font-family: 'Heebo', sans-serif;
+font-size: 32px;
+font-weight: bold;
+background: rgb(34, 34, 34) !important;
+color: white;
+padding:5px;
+border-radius:0px 0px 0px 25px;
+}
+.countdown-container{
+width:100%;
+height:100%;
+position:absolute;
+display:flex;
+justify-content:center;
+}
+#countdown{
+top: 5%;
+position: absolute;
+z-index: 10;
+background: #7573c8;
+border-radius: 50px;
+color: white;
+padding: 0px 4px 0px 4px;
+opacity:0.7
+}
+
+#scoreContainer{
+position: relative;
+width:100%;
+height:100%;
+
+}

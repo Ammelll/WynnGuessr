@@ -1,0 +1,13 @@
+{
+    "type": "cubemap",
+    "cubeMap": [
+        "../imgs/panoramas/renamediPC3vuyXvDXpeRR4BoajTY/panorama_0.png",
+        "../imgs/panoramas/renamediPC3vuyXvDXpeRR4BoajTY/panorama_1.png",
+        "../imgs/panoramas/renamediPC3vuyXvDXpeRR4BoajTY/panorama_2.png",
+        "../imgs/panoramas/renamediPC3vuyXvDXpeRR4BoajTY/panorama_3.png",
+        "../imgs/panoramas/renamediPC3vuyXvDXpeRR4BoajTY/panorama_4.png",
+        "../imgs/panoramas/renamediPC3vuyXvDXpeRR4BoajTY/panorama_5.png"
+    ],
+    "autoLoad": true,
+    "showControls": false
+}

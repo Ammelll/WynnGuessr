@@ -1,0 +1,35 @@
+{
+  "name": "wynnguessr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "websockets-server/server.js",
+  "dependencies": {
+    "accepts": "^1.3.8",
+    "base64id": "^2.0.0",
+    "cookie": "^0.4.2",
+    "cors": "^2.8.5",
+    "debug": "^4.3.4",
+    "engine.io": "^6.5.1",
+    "engine.io-parser": "^5.1.0",
+    "js-cookie": "^3.0.5",
+    "mime-db": "^1.52.0",
+    "mime-types": "^2.1.35",
+    "ms": "^2.1.2",
+    "mysql": "^2.18.1",
+    "negotiator": "^0.6.3",
+    "object-assign": "^4.1.1",
+    "socket.io": "^4.7.1",
+    "socket.io-adapter": "^2.5.2",
+    "socket.io-parser": "^4.2.4",
+    "vary": "^1.1.2",
+    "ws": "^8.11.0"
+  },
+  "scripts": {
+    "devStart": "nodemon websockets-server/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

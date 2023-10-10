@@ -1,0 +1,19 @@
+html {
+    text-align: center;
+    background-image: url('signup/signup.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div {
+    padding : 20px;
+}
+div:hover:not(#header) {
+    color: red;
+    background-color: honeydew;
+}
+a {
+    text-decoration: none;
+}
+h1 {
+    color :blue
+}
