@@ -1,6 +1,7 @@
 const crypto = require('crypto');
 const matches = [];
 const queue = [];
+const duelMap = new Map();
 let room_uuid = crypto.randomUUID();
 let mysql = require('mysql');
 let connection = mysql.createConnection({
@@ -63,11 +64,49 @@ io.on('connection', (socket) => {
             });
         }
     });
+socket.on('join-duel',(dinfo) =>{
+	let gkey = dinfo.gkey;
+	let uid = dinfo.uid;
+	socket.join(gkey);
+      socket.emit("joined-room", gkey);
+	duelMap.set(uid,gkey);
+	if(getFull(duelMap,gkey)){
+	players = getKeysByValue(duelMap,gkey);
+	insertPlayers(players[0],players[1], function(result) {
+	io.to(gkey).emit('join-game',result.insertId);
+	    matches.push({
+                    room_uuid: gkey,
+                    matchID: result.insertId,
+                    player_one_id: players[0],
+                    player_two_id: players[1],
+                    player_one_elo_change: null,
+                    player_two_elo_change: null,
+                    winnerID: null,
+                    rounds: [],
+                    currentPanoramaID: null,
+                    current_term_status_one: false,
+                    current_term_status_two: false,
+                });
 
+
+
+	duelMap.delete(players[0]);
+	duelMap.delete(players[1]);
+     let match = matches.at(-1);
+    if (match != undefined) {
+                    getRandomPanoramaID(function(panoramaID) {
+                        match.currentPanoramaID = panoramaID;
+                    })
+                }
+
+})
+	}
+})
 
     socket.on('client-rejoin-room', (room_uuid, matchID) => {
         let match = getMatchByMatchID(matchID);
-        socket.join(room_uuid);
+        console.log(match);
+	socket.join(room_uuid);
         if (match != null) {
             getPanoramaFileNameFromID(match.currentPanoramaID, function(result) {
                 socket.emit("new-round-panorama", result);
@@ -75,7 +114,6 @@ io.on('connection', (socket) => {
         }
 
     })
-
     // socket.on('client-panorama-request', (userID) => {
     //     let match = getMatchByUserID(userID);
     //     if (match != undefined) {
@@ -93,8 +131,6 @@ io.on('connection', (socket) => {
         let match = getMatchByMatchID(latlng.matchID);
         let userID = latlng.userID;
 	console.log(match);
-	console.log(isUserInMatch(userID,match));
-	console.log(isRoomUUIDValid(room_uuid,match));
         if (isUserInMatch(userID, match) && isRoomUUIDValid(room_uuid, match)) {
 
             if (isUserPlayerOne(userID, match)) {
@@ -172,6 +208,24 @@ total+=round.score;
 });
 return total;
 
+}
+function getFull(map,val){
+arr = map.values();
+let counter = 0;
+Array.from(arr).forEach((e) => {if(e==val){counter++}});
+return counter > 1;
+}
+
+
+function getKeysByValue(map, target) {
+let values = [];
+let entries = map.entries();
+for(const [key,value] of entries){
+if(value == target){
+values.push(key);
+}
+}
+return values;
 }
 
 function getPlayerLastScore(id, match) {
@@ -311,7 +365,7 @@ function getPanoramaFileNameFromID(panoramaID, callback) {
     connection.query("SELECT `cubemap-filename` FROM panoramas WHERE panoramaID = " + panoramaID, function(err, result) {
         if (err) throw err;
 	if(result[0] == null){
-		return callback("rymek-east-upper-cubemap.json");
+		return callback("rymek-east-upper-border-house-cube-map.json");
 	}
         return callback(result[0]['cubemap-filename']);
     });

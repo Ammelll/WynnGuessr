@@ -14,6 +14,7 @@ $(document).ready(function() {
         $("#countdown").toggleClass('hidden')
         $("#submit").attr("disabled", false);
         currentMarker.removeFrom(map);
+	console.log(path);
         $(".panorama-container").html(`<iframe id="panorama" allowfullscreen style="border-style:none;" src=${new Panorama(path).getPath()}></iframe>`);
     });
     if (typeof Cookies.get("match_id") != 'undefined') {

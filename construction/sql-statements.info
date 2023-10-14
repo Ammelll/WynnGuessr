@@ -35,3 +35,5 @@ CREATE TABLE `panoramas`(
     `lng` int(11),
     PRIMARY KEY (panoramaID)
 );
+create table duels(`duelID` INT(11) NOT NULL AUTO_INCREMENT, `gameKey` INT(11) NOT NULL, `playerOneID` INT(11), `playerTwoID` INT(11), `creation-time` DATETIME DEFAULT CURRENT_TIMESTAMP,PRIMARY KEY (duelID));
+

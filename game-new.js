@@ -1,7 +1,6 @@
 
 const socket = io('http://24.130.55.123:3001');
 const userID = $('.player-id').html();
-console.log(userID);
 var countdown = 15
 var intervalID = null
 let matchID = null;
@@ -22,14 +21,15 @@ $(document).ready(function() {
         if (currentMarker != null) {
             currentMarker.removeFrom(map);
         }
+	console.log(path);
         $(".panorama-container").html(`<iframe id="panorama" allowfullscreen style="border-style:none;" src=${new Panorama(path).getPath()}></iframe>`);
     });
     if (typeof Cookies.get("match_id") != 'undefined') {
         matchID = Cookies.get("match_id");
+	console.log(matchID);
     }
     if (typeof Cookies.get("room_uuid") != 'undefined' && matchID != null) {
         socket.emit("client-rejoin-room", Cookies.get("room_uuid"), matchID);
-        console.log('rejoined');
     }
     currentMarker = null;
     finished = false;
