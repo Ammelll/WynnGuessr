@@ -20,5 +20,5 @@ To setup the client side of the project (Enable PDO for mysql in php.ini) and st
 ```
 If your deployment location changes, one will have to edit the "localhost" within files to the ip of their preference.
 
-To setup the SQL database install via sql.sql
+To setup the SQL database install via sql.sql and alter the username and password for the database accordingly
 
