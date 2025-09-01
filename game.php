@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/></head>
     <link rel="stylesheet" href="game.css"/>
     <script defer src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>  
-  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script> 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="crossorigin="anonymous"></script>   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
     <script src='panorama.js'></script>
-<script defer  src='game-new.js'></script>
+<script defer  src='game.js'></script>
 </head>
 <body>
 <div class='countdown-container'>
