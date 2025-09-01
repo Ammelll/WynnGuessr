@@ -1,4 +1,4 @@
-const socket = io('http://24.130.55.123:3001');
+const socket = io('http://localhost:3001');
 $( document ).ready(function() {
 let key = $("#key").html();
 let userID = $('.player-id').html();

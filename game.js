@@ -110,6 +110,7 @@ $( document ).ready(function() {
             }
         });
         //create iframe (panorama) check pannellum.org for documentation
+        console.log("a")
         $(".panorama-container").append(`<iframe id="panorama" allowfullscreen style="border-style:none;" src=${panorama.getPath()}></iframe>`);
     //updates values on new turn
     function newTurn(){

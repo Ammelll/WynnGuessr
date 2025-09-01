@@ -1,8 +1,8 @@
 <?php 
 //credentials
-$dsn = "mysql:host=127.0.0.1;dbname=wynnguessr";
-$dbusername = "newuser";
-$dbpassword = "password";
+$dsn = "mysql:host=localhost;dbname=wynnguessr";
+$dbusername = "root";
+$dbpassword = "";
 
 try{
     //connects to db

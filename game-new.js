@@ -1,5 +1,5 @@
 
-const socket = io('http://24.130.55.123:3001');
+const socket = io('http://localhost:3001');
 const userID = $('.player-id').html();
 var countdown = 15
 var intervalID = null
@@ -21,16 +21,18 @@ $(document).ready(function() {
         if (currentMarker != null) {
             currentMarker.removeFrom(map);
         }
-	console.log(path);
         $(".panorama-container").html(`<iframe id="panorama" allowfullscreen style="border-style:none;" src=${new Panorama(path).getPath()}></iframe>`);
     });
     if (typeof Cookies.get("match_id") != 'undefined') {
         matchID = Cookies.get("match_id");
-	console.log(matchID);
     }
     if (typeof Cookies.get("room_uuid") != 'undefined' && matchID != null) {
         socket.emit("client-rejoin-room", Cookies.get("room_uuid"), matchID);
     }
+    console.log("USERID " + userID)
+    socket.emit("client-panorama-request",userID);
+
+
     currentMarker = null;
     finished = false;
 });
@@ -44,7 +46,6 @@ socket.on('round-end-countdown', () => {
 
 
 socket.on('round-results', (results) => {
-console.log(results);
     if (results.player_one_id == userID) {
         var userScore = results.player_one_score
         var oppScore = results.player_two_score
@@ -57,7 +58,6 @@ console.log(results);
         var oppTotal = results.player_one_total_score
     }
     $(".map-container").addClass('results');
-console.log(results)
     answerMarker = L.marker(L.latLng(results.answerLocation[0], results.answerLocation[1])).addTo(map).bindPopup("<b>Answer Location</b>", {
             autoClose: false
         }).openPopup();;
@@ -94,7 +94,6 @@ map.on('click', function(ev) {
         }
         updateMarker();
         currentMarker.addTo(map);
-        console.log(currentMarker)
         $("#submit").attr("disabled", false);
     }
 

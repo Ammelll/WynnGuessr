@@ -1,4 +1,4 @@
-const socket = io('http://34.132.9.169:3001');
+const socket = io('http://localhost:3001');
 const userID = $('.player-id').html();
 var countdown = 15
 var intervalID = null

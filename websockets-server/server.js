@@ -1,13 +1,14 @@
 
+const { match } = require('assert');
 const crypto = require('crypto');
 const matches = [];
 const queue = []
 let room_uuid = crypto.randomUUID();
 let mysql = require('mysql');
 let connection = mysql.createConnection({
-    host: "35.232.166.198",
+    host: "localhost",
     user: "root",
-    password: "pr0toc@\\76h;;",
+    password: "",
     database:"wynnguessr"
   });
 connection.connect(function(err) {
@@ -22,9 +23,7 @@ const io = require('socket.io')(3001,{
 
 
 io.on('connection', (socket) =>{
-console.log('bs');
     socket.on('client-queue', (userID)=>{
-        console.log(1);
         queue.push(parseInt(userID));
         socket.join(room_uuid)
         socket.emit("joined-room", room_uuid);
@@ -56,7 +55,7 @@ console.log('bs');
                     return match.player_one_id = userID;
                 })[0];
                 if(match != undefined){
-                    io.to(match.room_uuid).emit('join-game');
+                    io.to(match.room_uuid).emit('join-game',match.matchID);
                 }
                 room_uuid = crypto.randomUUID();
             })
@@ -73,6 +72,9 @@ console.log('bs');
         let match = matches.filter(match => {
             return match.player_one_id = userID;
         })[0];
+        console.log(matches)
+        console.log(userID)
+        console.log(match)
         if(match != undefined){
             let panoramaID = match.currentPanoramaID;            
             getPanoramaFileNameFromID(panoramaID,function(result){
@@ -90,12 +92,14 @@ console.log('bs');
             round_stage:match.rounds.length,
             panoramaID:match.currentPanoramaID,
             score:(getLatLngFromPanoramaID(match.currentPanoramaID, function(result){
-                console.log(result)
                 calculateScore(result,latlng.lat,latlng.lng);
             }),latlng.lat,latlng.lng),
             lat:latlng.lat,
             lng:latlng.lng
         });
+        io.to(match.room_uuid).emit("round-end-countdown")
+        setTimeout(() => io.to(match.randomUUID).emit("round-results",), 5000)
+
     });
 })
 function insertPlayers(one,two,callback){
